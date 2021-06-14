@@ -12,3 +12,30 @@ int main(void) {
   assert (mode(y, 1) == 5);
   printf("Mode: passed\n");
   }
+
+int mode(int a[], int n)
+{
+    int c[n];
+    int m=0;
+    for( int i=0;i<n;i++ )
+    {
+        int num=a[i];
+        for( int j=i;j<n;j++ )
+        {
+            if( num == a[j])
+            {
+                c[i]++;
+            }
+        }
+    }
+    int l=c[0];
+    for(int i=0;i<n;i++)
+    {
+        if( l < c[i])
+        {
+            l=c[i];
+            m=i;
+        }
+    }
+    return a[m];
+}
