@@ -13,13 +13,4 @@ int main(void) {
   printf("Max: passed\n");
   }
 
-int max(int a[],int n)
-{
-    int l=a[0];
-    for(int i=0;i<n;i++)
-    {
-        if( l < a[i])
-            l=a[i];
-    }
-    return l;
-}
+
